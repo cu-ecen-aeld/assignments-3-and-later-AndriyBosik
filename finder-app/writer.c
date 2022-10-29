@@ -7,6 +7,7 @@
 #include <syslog.h>
 
 int main(int argc, char *argv[]) {
+    openlog("assignment2", LOG_PID, LOG_USER);
     if (argc != 3) {
         syslog(LOG_USER | LOG_ERR, "Invalid number of arguments");
         return 1;
